@@ -16,13 +16,14 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //all the buttons in the app
         Button spotifyButton = (Button) findViewById(R.id.spotify);
         Button scoresButton = (Button) findViewById(R.id.scores);
         Button libraryButton = (Button) findViewById(R.id.library);
         Button buildBigButton = (Button) findViewById(R.id.buildBig);
         Button xyzButton = (Button) findViewById(R.id.xyz);
         Button ownButton = (Button) findViewById(R.id.own);
-
+        //setting onClickListener for each button to show toast
         spotifyButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Context context = getApplicationContext();
@@ -85,8 +86,6 @@ public class MainActivity extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
